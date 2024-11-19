@@ -1,0 +1,3 @@
+type CategoriesType = {
+    name: string
+}
