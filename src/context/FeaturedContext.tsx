@@ -16,7 +16,7 @@ export default function FeaturedContextProvider({ children }: { children: ReactN
     // Fetch categories from API
     const fetchProducts = async (limit: number) => {
         try {
-            const response = await fetch("https://fakestoreapi.com/products?limit=10");
+            const response = await fetch(`https://fakestoreapi.com/products?limit=${limit}`);
             const data = await response.json();
             console.log(data);
             setProducts(data);
@@ -26,7 +26,7 @@ export default function FeaturedContextProvider({ children }: { children: ReactN
     };
 
     useEffect(() => {
-        fetchProducts(10);
+        fetchProducts(8);
     }, []);
 
     return (
