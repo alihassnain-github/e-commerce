@@ -7,7 +7,7 @@ import { Input } from "./ui/input";
 export default function Footer() {
 
     return (
-        <div className="border-t py-8">
+        <div className="border-t py-8 px-4">
             <div className="grid lg:grid-rows-1 lg:grid-cols-4 md:grid-rows-2 md:grid-cols-2 grid-rows-4 grid-cols-1 max-w-7xl mx-auto">
                 <div>
                     <h1 className="text-lg font-semibold mb-4">E-Commerce</h1>
@@ -15,16 +15,16 @@ export default function Footer() {
                 </div>
                 <div>
                     <h6 className="mb-4 font-semibold text-lg">Quick Links</h6>
-                    <Link className="block mb-2 text-md" href="/shop">Home</Link>
-                    <Link className="block mb-2 text-md" href="/shop/men">Men</Link>
-                    <Link className="block mb-2 text-md" href="/shop/women">Women</Link>
-                    <Link className="block mb-2 text-md" href="/shop/jewelery">Jewelery</Link>
-                    <Link className="block mb-2 text-md" href="/shop/electronics">Electronics</Link>
+                    <Link className="block mb-2 text-sm transition-colors hover:text-primary text-muted-foreground" href="/shop">Home</Link>
+                    <Link className="block mb-2 text-sm transition-colors hover:text-primary text-muted-foreground" href="/shop/men">Men</Link>
+                    <Link className="block mb-2 text-sm transition-colors hover:text-primary text-muted-foreground" href="/shop/women">Women</Link>
+                    <Link className="block mb-2 text-sm transition-colors hover:text-primary text-muted-foreground" href="/shop/jewelery">Jewelery</Link>
+                    <Link className="block mb-2 text-sm transition-colors hover:text-primary text-muted-foreground" href="/shop/electronics">Electronics</Link>
                 </div>
                 <div>
                     <h6 className="mb-4 font-semibold text-lg">Legal</h6>
-                    <Link className="block mb-2 text-md" href="/privacy">Privacy Policy</Link>
-                    <Link className="block mb-2 text-md" href="/terms">Terms & Conditions</Link>
+                    <Link className="block mb-2 text-sm transition-colors hover:text-primary text-muted-foreground" href="/privacy">Privacy Policy</Link>
+                    <Link className="block mb-2 text-sm transition-colors hover:text-primary text-muted-foreground" href="/terms">Terms & Conditions</Link>
                 </div>
                 <div>
                     <h4 className="mb-4 font-semibold text-lg">Subscribe to our newsletter</h4>
@@ -35,7 +35,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <p className="text-center mt-4 text-sm">Built by Ali. The source code is available on GitHub.</p>
+            <p className="text-center mt-4 text-sm">Built by <a target="_blank" className="transition-colors hover:text-primary text-muted-foreground" href="">Ali</a>. The source code is available on <a target="_blank" href="" className="transition-colors hover:text-primary text-muted-foreground underline">GitHub</a>.</p>
         </div>
     )
 }

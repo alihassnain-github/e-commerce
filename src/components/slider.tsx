@@ -7,6 +7,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export function Slider() {
 
@@ -27,7 +28,9 @@ export function Slider() {
                     <div className="absolute top-[30%] left-[5%] z-50">
                         <h1 className="lg:text-4xl text-xl font-bold">Men's Clothing</h1>
                         <h2 className="font-medium lg:text-lg text-md mt-4">Elevate Your Style with Our Men's Collection!</h2>
-                        <Button variant="outline" className="mt-8">Shop Now</Button>
+                        <Button variant="outline" className="mt-8" asChild>
+                            <Link href="/shop/men">Shop Now</Link>
+                        </Button>
                     </div>
                 </CarouselItem>
                 <CarouselItem className="relative h-96">
@@ -44,7 +47,9 @@ export function Slider() {
                     <div className="absolute top-[30%] left-[5%] z-50">
                         <h1 className="lg:text-4xl text-xl font-bold">Women's Clothing</h1>
                         <h2 className="font-medium lg:text-lg text-md mt-4">Unleash Elegance with Women's Fashion!</h2>
-                        <Button variant="outline" className="mt-8">Shop Now</Button>
+                        <Button variant="outline" className="mt-8" asChild>
+                            <Link href="/shop/women">Shop Now</Link>
+                        </Button>
                     </div>
                 </CarouselItem>
                 <CarouselItem className="relative h-96">
@@ -61,7 +66,9 @@ export function Slider() {
                     <div className="absolute top-[30%] left-[5%] z-50">
                         <h1 className="lg:text-4xl text-xl font-bold">Electronics</h1>
                         <h2 className="font-medium lg:text-lg text-md mt-4">Upgrade Your Tech Game Today!</h2>
-                        <Button variant="outline" className="mt-8">Shop Now</Button>
+                        <Button variant="outline" className="mt-8" asChild>
+                            <Link href="/shop/electronics">Shop Now</Link>
+                        </Button>
                     </div>
                 </CarouselItem>
             </CarouselContent>
