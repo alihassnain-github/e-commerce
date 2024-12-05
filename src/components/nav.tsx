@@ -107,7 +107,7 @@ export default function Navbar() {
                     </Link>
                 </nav>
                 <div className="flex flex-1 items-center justify-end space-x-4">
-                    <Link href="/cart" className="relative">
+                    <Link href="/shop/cart" className="relative">
                         <Button variant="ghost" size="icon">
                             <ShoppingCart className="h-5 w-5" />
                             <span className="sr-only">Shopping Cart</span>

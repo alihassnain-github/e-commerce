@@ -8,9 +8,11 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { ShoppingCart } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 export default function ProductCard({ product }: { product: Product }) {
     const { id, image, title, description, price } = product;
+    const { addProduct } = useCart()!;
     return (
         <Card key={id} className="w-64 cursor-pointer">
             <div className="relative w-full h-48">
@@ -28,7 +30,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </CardHeader>
             <CardContent className="px-2 flex justify-between items-center">
                 <p className="text-muted-foreground font-medium">$ {price}</p>
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" onClick={() => addProduct({ title, description, image, price, productId: id })}>
                     <ShoppingCart />
                 </Button>
             </CardContent>

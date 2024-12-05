@@ -1,12 +1,12 @@
 import Footer from "@/components/footer"
 import Navbar from "@/components/nav"
 import AuthContextProvider from "@/context/AuthContext"
+import CartContextProvider from "@/context/CartContext"
 import CategoryContextProvider from "@/context/CategoryContext"
 import ElectronicsContextProvider from "@/context/ElectronicsProducts"
 import FeaturedContextProvider from "@/context/FeaturedContext"
 import JeweleryContextProvider from "@/context/JeweleryProductsContext"
 import MenContextProvider from "@/context/MenProductsContext"
-import MoreContextProvider from "@/context/MoreContext"
 import WomenContextProvider from "@/context/WomenProductsContext"
 
 export default function HomeLayout({
@@ -16,25 +16,25 @@ export default function HomeLayout({
 }) {
     return (
         <AuthContextProvider>
-            <MenContextProvider>
-                <WomenContextProvider>
-                    <JeweleryContextProvider>
-                        <ElectronicsContextProvider>
-                            <MoreContextProvider>
+            <CartContextProvider>
+                <MenContextProvider>
+                    <WomenContextProvider>
+                        <JeweleryContextProvider>
+                            <ElectronicsContextProvider>
                                 <FeaturedContextProvider>
                                     <CategoryContextProvider>
                                         <Navbar />
-                                        <section className="max-w-7xl mx-auto">
+                                        <section className="max-w-7xl mx-auto px-4 mb-8">
                                             {children}
                                         </section>
                                         <Footer />
                                     </CategoryContextProvider>
                                 </FeaturedContextProvider>
-                            </MoreContextProvider>
-                        </ElectronicsContextProvider>
-                    </JeweleryContextProvider>
-                </WomenContextProvider>
-            </MenContextProvider>
+                            </ElectronicsContextProvider>
+                        </JeweleryContextProvider>
+                    </WomenContextProvider>
+                </MenContextProvider>
+            </CartContextProvider>
         </AuthContextProvider>
     )
 }
